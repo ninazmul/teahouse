@@ -11,8 +11,9 @@
           theme: {
             extend: {
               colors: {
-                clifford: '#da373d',
-                btn-more: 'var(--linear, linear-gradient(270deg, #F00 0%, #FF8938 100%))',
+                'gradient-start': '#F00',
+                'gradient-end': '#FF8938',
+                
               }
             }
           }
@@ -23,8 +24,7 @@
         .font-manrope{
             font-family: 'Manrope', sans-serif;  
         }
-        :root{
-          --linear: linear-gradient(270deg, #F00 0%, #FF8938 100%);
+        
         }
     </style>
 </head>
@@ -33,7 +33,7 @@
         <div class="hero min-h-screen ">
             <div class="hero-content flex-col lg:flex-row-reverse gap-10">
               <div class="">
-                <img src="/images/banner.png" class="max-w-sm " />
+                <img src="/images/banner.png" class="md:max-w-sm " />
                 <div class="-mt-16 absolute">
                     <div class="hero bg-gray-800 w-60 shadow-2xl rounded-lg ">
                         <div class="hero-content flex-row lg:flex-row">
@@ -48,10 +48,10 @@
                 </div>
               </div>
               <div>
-                <h1 class="text-7xl font-extrabold">It's good <br>
+                <h1 class="xs:text-4xl text-5xl md:text-7xl font-extrabold">It's good <br>
                     tea time at The<br> Tea House</h1>
                 <p class="py-6">Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.</p>
-                <button class="btn bg-warning text-white flex items-center text-base fon">Explore More <img class="w-3" src="images/arrow.png" alt=""></button>
+                <button class="btn bg-gradient-to-r from-gradient-start to-gradient-end text-white flex items-center text-base fon">Explore More <img class="w-3" src="images/arrow.png" alt=""></button>
               </div>
             </div>
           </div>
@@ -130,10 +130,10 @@
       </section>
       <section>
         <div>
-          <div class="hero min-h-screen lg:p-10 text-white bg-gradient-to-r from-[#F00] to-[#FF8938] rounded-lg ">
+          <div class="hero min-h-screen lg:p-10 text-white bg-gradient-to-r from-gradient-start to-gradient-end rounded-lg ">
             <div class="hero-content flex-col lg:flex-row-reverse">
               <div class="relative">
-                <div class="p-6 lg:p-10 relative lg:w-[433px] opacity-25">
+                <div class="p-6 md:p-14 lg:p-10 relative lg:w-[433px] opacity-25">
                 
                   <div class="bg-white text-black p-8 rounded-lg gap-1 relative">
                     <img class="absolute -left-7 -top-7 border-4 border-white-500 rounded-full" src="images/client.png" alt="">
@@ -145,7 +145,7 @@
                   </div>
                 </div>
                 
-                <div class="p-6 lg:p-10 relative lg:w-[433px] opacity-25">
+                <div class="p-6 md:p-14 lg:p-10 relative lg:w-[433px] opacity-25">
                 
                   <div class="bg-white text-black p-8 rounded-lg gap-1 relative">
                     <img class="absolute -left-7 -top-7 border-4 border-white-500 rounded-full" src="images/client.png" alt="">
@@ -156,7 +156,7 @@
                       <img src="images/circles.png" alt=""></div>
                   </div>
                 </div>
-                <div class="p-4 lg:p-10 -left-auto md:-left-20 top-40 lg:w-[433px] absolute">
+                <div class="p-4 md:p-12 lg:p-10 -left-auto lg:-left-20 top-40 lg:w-[433px] absolute">
                 
                   <div class="bg-white text-black p-8 rounded-lg gap-1 relative">
                     <img class="absolute -left-7 -top-7 border-4 border-white-500 rounded-full" src="images/client.png" alt="">
@@ -172,7 +172,7 @@
               <div class="gap-10 lg:pr-8">
                 <h1 class="text-5xl font-bold">Meet Our Super <br> Clients</h1>
                 <p class="py-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                <button class="btn bg-white text-gradient-to-r from-[#F00] to-[#FF8938]">Show All</button>
+                <button class="btn font-extrabold bg-white outline-none border-none text-[#FF8938]">Show All</button>
               </div>
             </div>
           </div>
@@ -184,8 +184,8 @@
             <h1 class="text-5xl font-bold p-4">News & Events</h1>
           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
           </div>
-          <div class="text-start flex flex-col md:flex-row-2 lg:flex-row gap-4">
-            <div class="card w-96 glass">
+          <div class="text-start flex flex-col  md:justify-center lg:flex-row gap-4 ">
+            <div class="card w-auto lg:w-96 glass">
               <figure><img src="/images/news-1.png" alt="car!"/></figure>
               <div class="card-body">
                 <p>Feb 05, 2027</p>
@@ -196,7 +196,7 @@
                 </div>
               </div>
             </div>
-            <div class="card w-96 glass">
+            <div class="card w-auto lg:w-96 glass">
               <figure><img src="/images/news-2.png" alt="car!"/></figure>
               <div class="card-body">
                 <p>Feb 05, 2027</p>
@@ -207,7 +207,7 @@
                 </div>
               </div>
             </div>
-            <div class="card w-96 glass">
+            <div class="card w-auto lg:w-96 glass">
               <figure><img src="/images/news-3.png" alt="car!"/></figure>
               <div class="card-body">
                 <p>Feb 05, 2027</p>
@@ -223,7 +223,60 @@
       </section>
     </main>
     <footer>
-
+      <div>
+        <footer >
+            <div class="footer flex items-center justify-between px-16 pt-14 bg-base-200 text-base-content">
+              <div>
+                <img class="w-14" src="images/bg_cup.png" alt="">
+              </div>
+              <div class="flex items-center gap-4">
+                <h3>Ready to get started?</h3>
+                <button class="btn bg-gradient-to-r from-gradient-start to-gradient-end text-white">Get Started</button>
+              </div>
+            </div>
+            <div class="footer p-6 md:p-10 bg-base-200 text-base-content">
+              <div>
+                <span class="footer-title">quick Links</span> 
+                <a class="link link-hover">Home</a> 
+                <a class="link link-hover">About Us</a> 
+                <a class="link link-hover">Insurance</a> 
+                <a class="link link-hover">Privacy Policy</a>
+              </div> 
+              <div>
+                <span class="footer-title">Our Service</span> 
+                <a class="link link-hover">Life Insurance</a> 
+                <a class="link link-hover">Car Insurance</a> 
+                <a class="link link-hover">Health Insurance</a> 
+                <a class="link link-hover">House Insurance</a>
+              </div> 
+              <div>
+                <span class="footer-title">Help</span> 
+                <a class="link link-hover">FAQs</a> 
+                <a class="link link-hover">Contact Us</a> 
+                
+              </div> 
+              <div>
+                <span class="footer-title">Subscribe to our <br> mewsletter</span> 
+                <div class="form-control w-80">
+                  <label class="label">
+                    <span class="label-text">Enter your email address</span>
+                  </label> 
+                  <div class="relative">
+                    <input type="text" placeholder="username@site.com" class="bg-transparent border-black border-b-2 outline-none py-2" /> 
+                    <button class="btn btn-circle bg-gradient-to-r from-gradient-start to-gradient-end">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 320 512">! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<style>svg{fill:#f5f5f5}</style><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="footer footer-center p-4 bg-base-200 text-base-content">
+              <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+            </div>
+          
+        </footer>
+      </div>
     </footer>
 </body>
 </html>
